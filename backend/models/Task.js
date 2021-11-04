@@ -2,10 +2,8 @@ const { ObjectId } = require('mongodb');
 const connect = require('../connection');
 
 const createTasks = async(task) => {
-  console.log(task)
   const db = await connect();
   const newTask = await db.collection('tasks').insertOne({ task });
-  console.log(newTask)
   return { _id: newTask.insertedId, task }
 }
 

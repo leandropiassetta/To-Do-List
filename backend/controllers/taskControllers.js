@@ -4,7 +4,7 @@ const createTasks = async(req, res) => {
   const { task } = req.body;
   const newTask = await tasksService.createTasks(task)
   try {
-    return res.status(201).json(newTask, { message: 'Produto foi criado com sucesso' });
+    return res.status(201).json({name: newTask, message: 'Produto foi criado com sucesso' });
   }catch(e) {
     return res.status(e.code).json({ message: e.message });
   }
@@ -34,7 +34,7 @@ const updatedTasks = async(req, res) => {
   const { task } = req.body
   const updateTask = await tasksService.updateTasks(id, task);
   try {
-    return res.status(202).json(updateTask, { message: 'Produto foi atualizado com sucesso'});
+    return res.status(202).json({name: updateTask, message: 'Produto foi atualizado com sucesso'});
   }catch(e) {
     return res.status(e.code).json({ message: e.message });
   }

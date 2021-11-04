@@ -43,10 +43,12 @@ const updateTasks = async(id, task) => {
 }
 
 const deleteTasks = async(id) => {
-  const deleteTask = await taskModels.deleteTasks(id);
-  if(!deleteTask) {
+  const task = await taskModels.getByTask(id);
+  console.log(task)
+  if(!task) {
     return { code: 404, message: 'task not found' }
   }
+  const deleteTask = await taskModels.deleteTasks(id);
   return deleteTask;
 }
 
