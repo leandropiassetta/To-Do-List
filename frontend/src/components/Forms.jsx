@@ -1,5 +1,9 @@
 import React from 'react';
 
+// handleChange(e) {
+
+// }
+
 function Forms() {
   return (
     <form method="POST">
@@ -9,10 +13,10 @@ function Forms() {
         type="text" 
         placeholder="Adicione uma tarefa"
         name="task"
-        onChange={ handleChange }
+        // onChange={ handleChange }
         />
       </label>
-      <button onClick={ handleClick }> Adicionar tarefa</button>
+      <button /* onClick={ handleClick } */> Adicionar tarefa</button>
     </form>
   );
 }
