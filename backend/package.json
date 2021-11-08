@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/leandropiassetta/desafio-tecnico-trybe#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongodb": "^4.1.4",
     "nodemon": "^2.0.14"
   }
 }
