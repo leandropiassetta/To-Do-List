@@ -4,7 +4,7 @@ import axiosApi from '../api/request';
 
 function CreateList() {
   
-  const [tasks, setTasks] = useState([]);gst
+  const [tasks, setTasks] = useState([]);
   
   const getTasks = useCallback(
     () => {
